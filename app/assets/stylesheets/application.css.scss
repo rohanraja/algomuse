@@ -1,0 +1,74 @@
+
+ //= require bootstrap-variables
+ //= require bootstrap-generators
+
+$main-bg: #f2f2f2 ;
+
+
+body
+{
+	background-color: $main-bg !important ;
+	padding-top: 0px !important;
+}
+
+.yield_container
+{
+	padding-top: 200px;
+}
+
+
+.navbar-moveable
+{
+	position: absolute;
+	width: 100%;
+	margin-top: 120px;
+
+}
+
+.navbar-collapse {
+padding-left: 0px !important ;
+}
+.navbar-fixed-top
+{
+	margin-bottom: 100px;
+}
+
+#main_logo
+{
+	position: absolute;
+	margin-top: -100px;
+	height: 70px;
+}
+#nav_line
+{
+	background-color: #46494E;
+
+	li 
+	{
+
+		border-left: 1px solid #555 !important;
+		border-right: 1px solid #555 !important;
+		border-radius: 6px;
+		min-width: 140px;
+		text-align: center;
+
+		a
+		{
+			color: white !important;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			font-weight: bold;
+
+
+
+		}
+
+		a:hover
+		{
+			background-color: #333;
+		}
+	}
+
+
+	
+}
