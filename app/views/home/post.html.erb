@@ -1,23 +1,35 @@
 
 <div class="row">
 
-	<div class="col-md-8 article_col">
+	<div class="col-md-8 left_cont" >
 
+		<div class="article_col">
 
+	              <center>
 
-              <center>
+	              <h2 class="article_title">
+	                <%= @post.title %>
+	              </h2>
+	              </center>
+	              <br>
+	              <div class="article_header">
+	               
+	              	<img src="/assets/lor.jpg" class="headimg">
 
-              <h2 class="article_title">
-                <%= @post.title %>
-              </h2>
-              </center>
-              <br>
+	              	<b>Web -</b>
 
-		
+	              	<p class="article_overview"> In this article you will learn how to install Ruby on Rails on a machine running Mac OSX 10.7 - 10.9. We first install homebrew followed by ruby, gemsets and finally rails.</p>
 
+	             
+	        </div>
+			
 
-               <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
+	        <div class="article_content">
+	               <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
 
+	        </div>
+
+        </div>
 
 
 

@@ -41,7 +41,9 @@
   	font-weight: 100 !important;
   	font-size:18px;
   	color: rgb(68, 68, 68);
-	line-height:31px;
+	line-height:26px;
+
+
 
 
 
@@ -121,6 +123,13 @@ font-size: 2.3em;
 			font-weight: 150;
 		}
 
+
+	}
+
+	p:hover
+	{
+		cursor: pointer;
+		text-decoration: underline;
 	}
 }
 .rec_cards
@@ -133,3 +142,42 @@ font-size: 2.3em;
 
 }
 
+
+.left_cont
+{
+	padding-left: 0px !important;
+	padding-right: 0px  !important; 
+}
+
+.headimg
+{
+	height: 170px;
+	width: 300px;
+//	display: inline;
+	float: left;
+	margin-right: 25px;
+
+
+}
+.article_overview
+{
+//	float: right;
+
+	font-style: italic;
+
+	font-weight: normal;
+}
+
+.article_header
+{
+	height: 170px;
+}
+.article_content
+{
+	margin-top: 30px;
+}
+
+.spaced
+{
+	margin-top: 20px;
+}
