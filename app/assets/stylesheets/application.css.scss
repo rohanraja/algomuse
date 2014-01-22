@@ -10,6 +10,17 @@ body
 	background-color: $main-bg !important ;
 	padding-top: 0px !important;
 }
+.col-md-8
+{
+	width: 70% !important;
+}
+
+.col-md-4
+{
+
+	width: 30% !important;
+
+}
 
 .yield_container
 {
@@ -79,7 +90,7 @@ padding-right: 0px !important;
 
 .searchbox
 {
-	width: 350px;
+	width: 312px;
 	height: 36px;//44px;
 	font-size: 17px;
 	top: 7px;//3px;
