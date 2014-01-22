@@ -133,6 +133,7 @@ font-size: 2.3em;
 		text-decoration: underline;
 	}
 }
+
 .rec_cards
 {
 	@extend .app_border ;
@@ -237,7 +238,59 @@ line-height: 1.25;
 	margin-top: 20px;
 }
 
+$length: 20px;
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	position: absolute;
+	border-color: white;
+	border-left: $length solid transparent;
+	border-right: $length solid transparent;
+	
+	border-bottom: $length solid white;
+
+	margin-left: 40px;
+}
+
+
 #disqus_thread
 {
 	margin-top: 30px;
+}
+
+.lang_card
+{
+	@extend .app_border ;
+	background-color: #fff;
+   height: 80px;
+   margin-bottom: 10px;
+
+
+   img{
+
+   	height: 70px;
+   	width: 70px;
+   	top: 5px;
+   	left: 15px;
+   	position: relative;
+   }
+
+   .langtext
+   {
+ /*  	text-align: center;
+   	position: relative;
+   	top: -60px;
+   	left: 30px;
+   	font-size: 30px;
+   	border : 1px solid;*/
+
+  // 	border : 1px solid;
+   	width: 200px;
+   	position: relative;
+   	left: 105px;
+   	top: -65px;
+   }
+
+
 }
