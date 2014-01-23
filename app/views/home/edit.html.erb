@@ -5,11 +5,26 @@
 
 		<div class="article_col">
 
-	           
-               <%= render partial: "article_header", locals: {post: @post} %>
+	              <center>
+
+	              <h2 class="article_title">
+	                <%= @post.title %>
+	              </h2>
+	              </center>
+	              <br>
+	              <div class="article_header">
+	               
+	              	<img src="/assets/lor.jpg" class="headimg">
+
+	              	<b>Web -</b>
+
+	              	<p class="article_overview"> In this article you will learn how to install Ruby on Rails on a machine running Mac OSX 10.7 - 10.9. We first install homebrew followed by ruby, gemsets and finally rails.</p>
+
+	             
+	        </div>
 			
 
-	        <div class="article_content">
+	        <div class="article_content" contenteditable = true>
 	               <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
 
 	        </div>

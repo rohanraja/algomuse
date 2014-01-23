@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
   get "home/index"
+  get "home/edit"
+  get "home/topic_list"
   get 'home/post/:id' => 'home#post'
 
   resources :posts
