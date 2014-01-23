@@ -7,7 +7,7 @@
     <h2 class="topic_head">Python</h2>
 
 
-   <%= render partial: "article_list", locals: {post: @post} %>
+   <%= render partial: "cards/article_list", locals: {post: @post} %>
 
 
 
@@ -16,57 +16,14 @@
 	</div>
 
 	<div class="col-md-4 recom">
-	<!-- 	<div class="borderdiv"></div> -->
 		
 	<div class="recwrapper">
 
                
-                <div class="lang_card">
+     <%= render partial: "cards/langcard", locals: {img_file: "rorlogo.png", lang_title: "Ruby on Rails"} %>
 
-                  <img src="/assets/php.jpg" class="langimg">
-
-                    <div class="langtext">
-
-                    <h2>PHP</h2>
-
-                    </div>
-
-                </div>
-                <div class="lang_card">
-
-                  <img src="/assets/python.jpg" class="langimg">
-
-                    <div class="langtext">
-
-                    <h2>Python</h2>
-
-                    </div>
-
-                </div>
+     <%= render partial: "cards/langcard", locals: {img_file: "php.jpg", lang_title: "PHP"} %>
 	
-<!--                 <div class="rec_cards">
-                	<img src="/assets/ror.jpg" class="recimg">
-
-                	<div class="rectext">
-
-                		<p><b>Web -</b> How to install Node.js on Windows with VMWare installed</p>
-
-                	</div>
-
-                </div>
-                  <div class="rec_cards">
-                	<img src="/assets/lor.jpg" class="recimg">
-
-                	<div class="rectext">
-
-                		<p><b>Electronics -</b> How to install apache server on Raspberry Pi</p>
-
-                	</div>
-
-                </div>
-                <div class="rec_cards"></div>
-                <div class="rec_cards"></div>
-                <div class="rec_cards"></div> -->
 
 
 		</div>
