@@ -1,8 +1,19 @@
 Blog::Application.routes.draw do
+  resources :categories
+
   get "home/index"
   get "home/edit"
-  get "home/topic_list"
-  get 'home/post/:id' => 'home#post'
+  get "home/topic_list/:id" => 'home#topic_list'
+  # get "post/:id" => 'home#post'
+
+  Category.all.each do |c|
+
+     get c.name.parameterize => "home#topic_list"
+     get "#{c.name.parameterize}/:posturl" => "home#post"
+
+  end
+
+  
 
   resources :posts
 

@@ -5,13 +5,26 @@ class HomeController < ApplicationController
   end
 
   def topic_list
-  	@post = Post.find(2)
-  	@title = @post.title
+
+    cat = Category.where(:url_name => request.path.gsub('/','') ).first
+
+    # Category.all.each do |c|
+
+    #   if c.name.parameterize == request.path.gsub('/','')
+
+    #     cat = c
+
+    #   end
+
+    # end
+
+  	@post = Post.find(1)
+  	@title = cat.name
   end
 
   def post
-
-  	@post = Post.find(1)
+    
+    @post = Post.where(:urltext => params[:posturl]).first
   	@post.body = coderay(@post.body)
   	@title = @post.title
 

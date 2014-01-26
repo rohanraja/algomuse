@@ -15,3 +15,18 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+
+$(document).ready(function(){
+
+
+$('.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown('fast');
+}, function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
+});
+
+
+});
+
+

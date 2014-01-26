@@ -57,5 +57,5 @@ end
 
 gem "bootstrap-generators"
 
-gem "unicorn-rails"
+#gem "unicorn-rails"
 gem "devise"
