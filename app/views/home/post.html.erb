@@ -58,27 +58,14 @@
 		
 	<div class="recwrapper">
 	
-                <div class="rec_cards">
-                	<img src="/assets/ror.jpg" class="recimg">
 
-                	<div class="rectext">
+                <% Post.all.limit(5).each do |p| %>
 
-                		<p><b>Web -</b> How to install Node.js on Windows with VMWare installed</p>
+                  <%= render partial: "cards/rec_card", locals: {post: p} if p.id != @post.id  %>
 
-                	</div>
-
-                </div>
-                  <div class="rec_cards">
-                	<img src="/assets/lor.jpg" class="recimg">
-
-                	<div class="rectext">
-
-                		<p><b>Electronics -</b> How to install apache server on Raspberry Pi</p>
-
-                	</div>
-
-                </div>
-                <!-- <div class="rec_cards"></div> -->
+                <% end %>
+              
+              <!-- <div class="rec_cards"></div> -->
 
 
 		</div>
