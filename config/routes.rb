@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
 
   get "home/index"
   get "home/edit"
+  get "home/feed"
   get "home/topic_list/:id" => 'home#topic_list'
   # get "post/:id" => 'home#post'
 

@@ -28,4 +28,11 @@ class HomeController < ApplicationController
 
   end
 
+  def feed
+    @posts = Post.all
+
+    render :template => 'home/feed.rss.builder', :layout => false
+
+  end
+
 end
