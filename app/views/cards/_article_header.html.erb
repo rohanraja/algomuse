@@ -1,17 +1,17 @@
 <center>
 
-<h2 class="article_title">
+<a href="<%= "/" + post.categories.first.url_name + "/" + post.urltext %>" style="color: rgb(82, 82, 82) !important;"><h2 class="article_title">
 <%= post.title %>
-</h2>
+</h2></a>
 </center>
 <br>
 <div class="article_header">
 
-	<img src="/assets/lor.jpg" class="headimg">
+	<a href="<%= ("/" + post.categories.first.url_name + "/" + post.urltext) %>" ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg"></a>
 
-	<b>Web - <span>Ruby on Rails</span> </b>
+	<b><%= post.categories.first.field %> - <span><a href="/<%= post.categories.first.url_name %>"><%= post.categories.first.name %></a></span> </b>
 
-	<p class="article_overview"> In this article you will learn how to install Ruby on Rails on a machine running Mac OSX 10.7 - 10.9. We first install homebrew followed by ruby, gemsets and finally rails.</p>
+	<p class="article_overview"> <%= post.brief %></p>
 
 
 </div>

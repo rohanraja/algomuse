@@ -3,7 +3,7 @@
 
 	<div class="col-md-8 left_cont" >
 
-   <%= render partial: "cards/article_list", locals: {post: @post} %>
+   <%= render partial: "cards/article_list", locals: {posts: @posts} %>
 
 
 	</div>
@@ -12,10 +12,11 @@
 		
 	<div class="recwrapper">
 
-  <%= render partial: "cards/langcard", locals: {img_file: "rorlogo.png", lang_title: "Ruby on Rails", langurl: "ruby-on-rails"} %>
-  <%= render partial: "cards/langcard", locals: {img_file: "php.jpg", lang_title: "PHP", langurl: "php"} %>
-  <%= render partial: "cards/langcard", locals: {img_file: "python.jpg", lang_title: "Python", langurl: "python"} %>
+    <% Category.all.each do |p| %>
 
+      <%= render partial: "cards/langcard", locals: {cat: p} %>
+
+    <% end %>
             
 
 		</div>

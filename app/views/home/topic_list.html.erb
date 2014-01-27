@@ -4,10 +4,10 @@
 
 	<div class="col-md-8 left_cont python_css topic_cont" >
 
-    <h2 class="topic_head">Python</h2>
+    <h2 class="topic_head"><%= @cat.name %></h2>
 
 
-   <%= render partial: "cards/article_list", locals: {post: @post} %>
+   <%= render partial: "cards/article_list", locals: {posts: @posts} %>
 
 
 
@@ -19,9 +19,11 @@
 		
 	<div class="recwrapper">
 
-  <%= render partial: "cards/langcard", locals: {img_file: "rorlogo.png", lang_title: "Ruby on Rails", langurl: "ruby-on-rails"} %>
-  <%= render partial: "cards/langcard", locals: {img_file: "php.jpg", lang_title: "PHP", langurl: "php"} %>
-	
+<% Category.all.each do |p| %>
+
+      <%= render({partial: "cards/langcard", locals: {cat: p}}) if p.name != @cat.name %>
+
+    <% end %>
 
 
 		</div>

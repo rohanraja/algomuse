@@ -36,10 +36,13 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="dropdown navli"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Web</a>
+
+         <% Category.select(:field).distinct.each do |f| %>
+
+          <li class="dropdown navli"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= f.field %></a>
 
             <ul class="dropdown-menu menu_dropdown">
-              <% Category.where(:field => "Web").each do |c| %>
+              <% Category.where(:field => f.field).each do |c| %>
 
                 <li onclick="window.location = '/<%= c.url_name %>'"><a href="/<%= c.url_name %>"><%= c.name %></a></li>
 
@@ -50,32 +53,11 @@
 
           </li>
 
-          <li class="dropdown navli"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Coding</a>
+          <% end %>
 
-            <ul class="dropdown-menu menu_dropdown">
-              <% Category.where(:field => "Coding").each do |c| %>
+          
 
-                <li onclick="window.location = '/<%= c.url_name %>'"><a href="/<%= c.url_name %>"><%= c.name %></a></li>
-
-              <% end %>
-
-              </ul>
-
-
-          </li>
-
-          <li class="dropdown navli"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Electronics</a>
-
-            <ul class="dropdown-menu menu_dropdown">
-                <% Category.where(:field => "Electronics").each do |c| %>
-
-                <li onclick="window.location = '/<%= c.url_name %>'"><a href="/<%= c.url_name %>"><%= c.name %></a></li>
-
-              <% end %>
-              </ul>
-
-
-          </li>
+          
           <li class="dropdown navli"><a href="#contact">About</a></li>
         </ul>
         <input type="email" class="pull-right form-control searchbox" placeholder="Search"> 
