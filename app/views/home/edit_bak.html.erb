@@ -8,10 +8,10 @@
 	           
                <%= render partial: "cards/article_header", locals: {post: @post} %>
 			
-          
 
-	        <div class="article_content">
-	               <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
+	        <div class="article_content" contenteditable=true >
+
+	               <%= raw( @post.body.gsub(/\n/, '<br>') ) %>
 
 	        </div>
 
@@ -56,6 +56,14 @@
 
 	<div class="col-md-4 recom">
 	<!-- 	<div class="borderdiv"></div> -->
+
+	<form onsubmit="send_edited_data()" action="/home/getdata" method="post">
+Data <input type="text" name="data" id="fdata" value="Donald">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+
 		
 	<div class="recwrapper">
 	
@@ -78,4 +86,19 @@
 
 
 </div>
+
+
+
+
+
+<script type="text/javascript">
+
+function send_edited_data()
+{
+	dataa = $('.article_content').html() ;
+	$("#fdata").val(dataa);
+
+}
+
+</script>
 

@@ -165,9 +165,10 @@ font-size: 2.3em;
 {
 //	float: right;
 
-	font-style: italic;
+//	font-style: italic;
 
-	font-weight: normal;
+	font-weight: 50;
+	color: #888;
 	margin-top: 10px;
 }
 
@@ -192,10 +193,14 @@ font-size: 2.3em;
 	margin-top: 30px;
 
 
-	b{
+	.step{
 		font-size: 25px;
 		font-weight: normal;
+		line-height: 30px;
 		margin-top: 40px !important;
+	}
+	b{
+		font-weight: 110;
 	}
 }
 
@@ -277,14 +282,21 @@ $length: 20px;
 {
 	@extend .app_border ;
 	background-color: #fff;
-   height: 80px;
+   height: 70px;
    margin-bottom: 10px;
 
+   h2
+   {
+   		font-weight: normal !important;
+   		font-size: 20px;
+
+   }
+   
 
    img{
 
-   	height: 70px;
-   	width: 70px;
+   	height: 60px;
+   	width: 60px;
    	top: 5px;
    	left: 15px;
    	position: relative;
@@ -299,11 +311,17 @@ $length: 20px;
    	font-size: 30px;
    	border : 1px solid;*/
 
+   	
+
+
+
   // 	border : 1px solid;
+
    	width: 200px;
+
    	position: relative;
    	left: 105px;
-   	top: -65px;
+   	top: -55px;
    }
 
 

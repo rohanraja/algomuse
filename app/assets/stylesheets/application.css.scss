@@ -2,6 +2,7 @@
  //= require bootstrap-variables
  //= require bootstrap-generators
  //= require coderay
+ //= require home
 
 $main-bg: #f2f2f2 ;
 
@@ -114,6 +115,39 @@ footer
 	height: 100px;
 	background-color: #46494E;
 	margin-top: 50px;
+	padding-top: 25px;
+
+	.footblock 
+	{
+		width: 50%;
+		margin: auto;
+		height: 50px;
+		text-align: center;
+
+		ul{
+
+			text-align: center;
+			margin: auto;
+			float: left;
+			display: inline;
+			width: 600px;
+			height: 60px;
+			position: relative;
+			font-size: 16px;
+			top : 10px;
+			li{
+				display: inline;
+				margin-left: 20px;
+				a{
+					color: #888 !important;
+				}
+				
+			}
+		}
+
+
+
+	}
 }
 
 

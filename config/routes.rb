@@ -4,6 +4,7 @@ Blog::Application.routes.draw do
   get "home/index"
   get "home/edit"
   get "home/feed"
+  post "home/getdata"
   get "home/topic_list/:id" => 'home#topic_list'
   # get "post/:id" => 'home#post'
 
@@ -23,6 +24,10 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'home#index'
+
+   get "/sitemap.:format" => 'home#sitemap'
+
+
 
 
   # Example of regular route:

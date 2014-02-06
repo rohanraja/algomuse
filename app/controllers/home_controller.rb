@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.all.order('created_at DESC')
   	@title = "Tutorials Villa"
   end
 
@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
     @cat = Category.where(:url_name => request.path.gsub('/','') ).first
 
-    @posts = @cat.posts
+    @posts = @cat.posts.order('created_at DESC')
   	@title = @cat.name
   end
 
@@ -33,6 +33,19 @@ class HomeController < ApplicationController
 
     render :template => 'home/feed.rss.builder', :layout => false
 
+  end
+
+  def sitemap
+    @posts = Post.all
+    @categories = Category.all
+
+  end
+
+  def getdata
+
+    Post.last.update(:body => params[:data] )
+
+    redirect_to edit_post_path(Post.first)
   end
 
 end
