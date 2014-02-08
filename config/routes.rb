@@ -6,6 +6,7 @@ Blog::Application.routes.draw do
   get "home/feed"
   post "home/getdata"
   get "home/topic_list/:id" => 'home#topic_list'
+  get "home/searchqry/:q" => 'home#searchqry'
   # get "post/:id" => 'home#post'
 
   Category.all.each do |c|

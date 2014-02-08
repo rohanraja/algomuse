@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
   	@posts = Post.all.order('created_at DESC')
-  	@title = "Tutorials Villa"
+  	@title = "Algomuse"
   end
 
   def topic_list
@@ -10,6 +10,19 @@ class HomeController < ApplicationController
 
     @posts = @cat.posts.order('created_at DESC')
   	@title = @cat.name
+  end
+
+  def searchqry
+
+    posts = Post.where("title LIKE '%#{params[:q]}%' OR body LIKE '%#{params[:q]}%'")
+
+    if posts.count == 0
+      render :text => "0"
+    else
+
+      render partial: "cards/search_results", locals: {posts: posts }
+    end
+
   end
 
   def post

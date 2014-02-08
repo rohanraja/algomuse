@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+
+
+
+$( document ).ready(function() {
+
+  $( ".searchbox" ).focus(function() {
+  console.log( "Handler for .focus() called." );
+	});
+
+
+});
