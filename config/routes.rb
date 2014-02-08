@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+  resources :request_texts
+
+  resources :subs_emails
+
   resources :categories
 
   get "home/index"

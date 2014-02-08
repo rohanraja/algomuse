@@ -95,10 +95,10 @@ padding-left: 0px !important ;
 
 		a
 		{
-			color: white !important;
+			color: #d2d2d2 !important;
 			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-			font-size: 15px;
-			font-weight: bold;
+			font-size: 17px;
+			font-weight: 100 !important;
 
 
 
@@ -106,7 +106,7 @@ padding-left: 0px !important ;
 
 		a:hover
 		{
-			background-color: #2e3033;
+			background-color: rgba(46,48,51,0.7); //#2e3033;
 		}
 	}
 

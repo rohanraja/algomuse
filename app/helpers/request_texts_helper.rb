@@ -1,0 +1,2 @@
+module RequestTextsHelper
+end

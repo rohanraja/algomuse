@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to request_texts_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_request_text_path(@request_text), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show request_text</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @request_text.name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @request_text.email %></dd>
+
+  <dt>Website:</dt>
+  <dd><%= @request_text.website %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @request_text.body %></dd>
+
+  <dt>Ip:</dt>
+  <dd><%= @request_text.ip %></dd>
+
+</dl>
