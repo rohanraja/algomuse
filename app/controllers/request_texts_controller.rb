@@ -30,7 +30,7 @@ class RequestTextsController < ApplicationController
 
     respond_to do |format|
       if @request_text.save
-        format.html { redirect_to @request_text, notice: 'Request text was successfully created.' }
+        format.html { redirect_to '/', notice: 'Request text was successfully created.' }
         format.json { render action: 'show', status: :created, location: @request_text }
       else
         format.html { render action: 'new' }

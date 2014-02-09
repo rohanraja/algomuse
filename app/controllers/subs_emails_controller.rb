@@ -30,11 +30,15 @@ class SubsEmailsController < ApplicationController
 
     respond_to do |format|
       if @subs_email.save
+        @is_send = true
         format.html { redirect_to @subs_email, notice: 'Subs email was successfully created.' }
         format.json { render action: 'show', status: :created, location: @subs_email }
+        format.js   {}
       else
+        @is_send = false
         format.html { render action: 'new' }
         format.json { render json: @subs_email.errors, status: :unprocessable_entity }
+        format.js   {}
       end
     end
   end

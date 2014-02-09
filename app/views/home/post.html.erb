@@ -19,10 +19,11 @@
         </div>
         <div class="arrow-up"></div>
          <div class="article_arthor">
-
+            <a href="/rohan">
          	<img src="/assets/profile.jpg">
 
          	<h3>Rohan Raja</h3>
+         </a>
          	<p>I am a technology enthusiast, mainly devoted to web developement. I also play guitar, synthesizer and love hobby electronics. </p>
 	        	
 	        </div>
@@ -65,8 +66,9 @@
                   <%= render partial: "cards/rec_card", locals: {post: p} if p.id != @post.id  %>
 
                 <% end %>
+                
               
-              <!-- <div class="rec_cards"></div> -->
+                <%= render partial: "cards/emailcard" %>
 
 
 		</div>

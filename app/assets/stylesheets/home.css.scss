@@ -40,7 +40,7 @@
 
   	font-weight: 100 !important;
   	font-size:18px;
-  	color: rgb(68, 68, 68);
+  	color: rgb(38, 38, 38);
 	line-height:26px;
 
 
@@ -59,6 +59,8 @@
 .article_title
 {
     font-weight: 300;
+       	 -webkit-font-smoothing: antialiased; 
+
 line-height: 1.1;
 font-family: 'Gotham Rounded SSm A','Gotham Rounded SSm B',sans-serif;
 font-size: 2.3em;
@@ -141,6 +143,9 @@ font-size: 2.3em;
    min-height: 240px;
    margin-bottom: 30px;
 
+   	 -webkit-font-smoothing: antialiased; 
+
+
 
 }
 
@@ -168,7 +173,7 @@ font-size: 2.3em;
 //	font-style: italic;
 
 	font-weight: 50;
-	color: #888;
+	color: #727272 ;//888;
 	margin-top: 10px;
 }
 
@@ -176,11 +181,14 @@ font-size: 2.3em;
 {
 	height: 170px;
 
+		 -webkit-font-smoothing: antialiased; 
+
+
 
 	span{
 		font-weight: 100;
 		//background-color: #46494E; //#2e3033;
-		color: #46494E;
+		color: #787378;//#464544;
 		//@extend .app_border;
 		padding: 5px;
 		font-style: italic;
@@ -191,6 +199,10 @@ font-size: 2.3em;
 .article_content
 {
 	margin-top: 30px;
+
+	//p,b{
+	 -webkit-font-smoothing: antialiased; 
+	//}
 
 
 	.step{
@@ -212,6 +224,9 @@ font-size: 2.3em;
 	margin-top: 20px;
 	width: 70%;
 	padding-right: 20px;
+
+		 -webkit-font-smoothing: antialiased; 
+
 
 	img{
 
@@ -278,12 +293,62 @@ $length: 20px;
 	margin-top: 30px;
 }
 
+.emailcard
+{
+	@extend .app_border ;
+	background-color: rgba(70,73,78,0.75);//#46494E;//background-color: #fff;
+   height: 60px;
+   margin-bottom: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-top: 20px;
+
+
+	.emailbox
+	{
+		width: 85%;
+		height: 40px;//44px;
+		font-size: 17px;
+		position: relative;
+		top: 10px;
+		border-radius: 5px;
+		background-color: rgba(46,48,51,1); //#2e3033;
+		border : none;
+		color: white;
+
+		transition: width 0.5s;
+		-webkit-transition: width 0.5s; /* Safari */
+
+
+	}
+
+	.subsbut
+	{
+		position: absolute;
+		width: 13%;
+		height: 40px;
+		margin-left: 72%;
+		margin-top : -34px;
+		background: none  !important;
+		border: none !important;
+		span{
+			font-size: 2em;
+		}
+		
+
+	}
+
+}
+
 .lang_card
 {
 	@extend .app_border ;
 	background-color: #fff;
    height: 70px;
    margin-bottom: 10px;
+
+      	 -webkit-font-smoothing: antialiased; 
+
 
    h2
    {

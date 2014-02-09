@@ -33,10 +33,11 @@ body
 		text-decoration: none !important;
 	}
 	h1{
-		color: white !important;  
+		color: #e0e0e0 !important;  
 		font-size: 70px; 
 		font-weight: 200 !important;
 		letter-spacing:5px;
+		 -webkit-font-smoothing: antialiased;
 
 	}
 }
@@ -82,7 +83,7 @@ padding-left: 0px !important ;
 {
 	background-color: rgba(70,73,78,0.75);//#46494E;
 	border: none !important;
-	
+	 -webkit-font-smoothing: antialiased; 
 
 	 .navli 
 	{
@@ -98,7 +99,8 @@ padding-left: 0px !important ;
 			color: #d2d2d2 !important;
 			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 			font-size: 17px;
-			font-weight: 100 !important;
+			font-weight: 500 !important;
+
 
 
 
@@ -135,7 +137,7 @@ footer
 
 	.footblock 
 	{
-		width: 50%;
+		width: 70%;
 		margin: auto;
 		height: 50px;
 		text-align: center;
@@ -146,7 +148,7 @@ footer
 			margin: auto;
 			float: left;
 			display: inline;
-			width: 600px;
+			width: 800px;
 			height: 60px;
 			position: relative;
 			font-size: 16px;
@@ -352,4 +354,7 @@ footer
 		}
 		
 	}
+
+
+
 

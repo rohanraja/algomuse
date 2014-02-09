@@ -61,4 +61,31 @@ class HomeController < ApplicationController
     redirect_to edit_post_path(Post.first)
   end
 
+
+  def about
+
+    @title = "About Algomuse"
+
+  end  
+
+  def rohan
+
+    @title = "About Rohan Raja"
+
+  end
+
+  def request_tut
+
+    @title = "Request Tutorial"
+    @request_text = RequestText.new
+
+  end
+
+  def feedback
+
+    @title = "Feedback"
+    @request_text = RequestText.new
+
+  end
+
 end

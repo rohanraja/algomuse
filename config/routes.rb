@@ -9,6 +9,12 @@ Blog::Application.routes.draw do
   get "home/edit"
   get "home/feed"
   post "home/getdata"
+
+  get "about" => 'home#about'
+  get "rohan" => 'home#rohan'
+  get "request" => 'home#request_tut'
+  get "feedback" => 'home#feedback'
+  
   get "home/topic_list/:id" => 'home#topic_list'
   get "home/searchqry/:q" => 'home#searchqry'
   # get "post/:id" => 'home#post'

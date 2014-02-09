@@ -1,3 +1,15 @@
+
+
+<div class="col-md-8 left_cont" >
+
+<div class="article_col">
+<div class="article_content" style="font-size:22px; line-height: 29px;">
+
+<h2 style="font-weight: 200;" class="">Feedback</h2>
+
+<hr>
+<br>
+
 <%= form_for(@request_text, :html => { :class => "form-horizontal" }) do |f| %>
   <% if @request_text.errors.any? %>
     <div class="alert alert-danger alert-dismissable">
@@ -33,7 +45,7 @@
   <hr>
 
   <div class="form-group">
-    <%= f.label :Request, :class => "col-lg-2 control-label" %>
+    <%= f.label :Feedback, :class => "col-lg-2 control-label" %>
     <div class="col-lg-10">
       <%= f.text_area :body, :class => "form-control" %>
     </div>
@@ -41,7 +53,7 @@
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit "Request this Tutorial", :class => "btn btn-primary" %>
+      <%= f.submit "Submit", :class => "btn btn-primary" %>
     </div>
   </div>
 <% end %>
@@ -53,3 +65,28 @@ label
   font-weight: normal !important;
 }
 </style>
+
+
+</div>
+
+</div>
+</div>
+
+
+<div class="col-md-4 recom " style="height:600px !important;">
+	<!-- 	<div class="borderdiv"></div> -->
+		
+	<div class="recwrapper">
+
+      <%= render partial: "cards/emailcard" %>
+
+       <style type="text/css">
+   .emailcard
+   {
+    margin-top: 0px !important;
+   }
+   </style>
+
+
+		</div>
+		</div>

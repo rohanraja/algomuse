@@ -30,26 +30,21 @@
       <%= f.text_field :website, :class => "form-control" %>
     </div>
   </div>
-  <hr>
-
   <div class="form-group">
-    <%= f.label :Request, :class => "col-lg-2 control-label" %>
+    <%= f.label :body, :class => "col-lg-2 control-label" %>
     <div class="col-lg-10">
       <%= f.text_area :body, :class => "form-control" %>
     </div>
   </div>
-
+  <div class="form-group">
+    <%= f.label :ip, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :ip, :class => "form-control" %>
+    </div>
+  </div>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit "Request this Tutorial", :class => "btn btn-primary" %>
+      <%= f.submit :class => "btn btn-primary" %>
     </div>
   </div>
 <% end %>
-
-
-<style type="text/css">
-label
-{
-  font-weight: normal !important;
-}
-</style>

@@ -1,0 +1,40 @@
+$('.emailicon').removeClass('glyphicon-envelope');
+$('.emailicon').removeClass('glyphicon-remove');
+$('.emailicon').removeClass('glyphicon-ok');
+
+
+<% if @is_send %>
+
+$('.emailicon').addClass('glyphicon-ok');
+
+$('.emailicon').fadeOut(2000, function() {
+
+	$('.emailicon').removeClass('glyphicon-ok');
+	$('.emailicon').addClass('glyphicon-envelope');
+
+	$('.emailicon').fadeIn();
+
+	$('.emailbox').val('');
+	
+});
+
+
+<% else %>
+
+$('.emailicon').addClass('glyphicon-remove');
+
+$('.emailicon').fadeOut(1500, function() {
+
+	$('.emailicon').removeClass('glyphicon-remove');
+	$('.emailicon').addClass('glyphicon-envelope');
+
+	$('.emailicon').fadeIn();
+
+	$('.emailbox').val('');
+	
+});
+
+<% end %>
+
+
+//
