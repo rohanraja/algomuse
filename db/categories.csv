@@ -1,0 +1,8 @@
+id,"name","logo_file","field","created_at","updated_at","url_name","imgurl"
+1,"Python","python.jpg","Coding","2014-01-23 12:17:19","2014-01-26 06:23:45","python",NULL
+2,"Ruby on Rails","ror.png","Web","2014-01-23 12:17:32","2014-01-26 06:23:45","ruby-on-rails",NULL
+3,"PHP","php.jpg","Web","2014-01-23 13:47:26","2014-01-26 06:23:45","php",NULL
+4,"C/C++","cpp.jpg","Coding","2014-01-23 13:47:40","2014-01-26 06:23:45","c-c",NULL
+5,"Arduino","ard.jpg","Electronics","2014-01-23 13:47:53","2014-01-26 06:23:45","arduino",NULL
+6,"Raspberry Pi","rpi.jpg","Electronics","2014-01-23 13:48:02","2014-01-26 06:23:45","raspberry-pi",NULL
+7,"Embedded C","emc.jpg","Electronics","2014-01-23 13:48:11","2014-01-26 06:23:45","embedded-c",NULL
