@@ -9,9 +9,10 @@
 
    <%= render partial: "cards/article_list", locals: {posts: @posts} %>
 
+   <% if @posts.count == 0 %> 
+   <h3 class="topic_req"><a href="/request" class="btn btn-primary btn-large">Request Tutorials for <%= @cat.name %></a></h3>
 
-
-
+   <% end %>
 
 	</div>
 

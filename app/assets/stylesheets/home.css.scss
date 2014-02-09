@@ -441,4 +441,36 @@ $length: 20px;
 {
 	text-align: center;
 	margin-bottom: 20px;
+	margin-top: 0px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 100;
+	background-color: #fff;
+	@extend .app_border;
+	padding: 20px;
+	font-size: 40px;
+
+}
+.topic_req
+{
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 200;
+	//background-color: #fff;
+
+
+	a{
+	@extend .app_border;
+	font-size: 20px !important;
+	background-color: rgba(70,73,78,0.75);
+	}
+
+	a:hover{
+
+		background-color: rgba(46,48,51,0.8);
+
+	}
+	padding: 20px;
+
 }
