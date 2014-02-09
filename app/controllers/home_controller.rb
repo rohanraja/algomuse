@@ -11,6 +11,7 @@ class HomeController < ApplicationController
   def index
   	@posts = Post.all.order('created_at DESC')
   	@title = "Algomuse"
+    @face_url = "/assets/favicon.gif"
   end
 
   def topic_list
@@ -39,6 +40,8 @@ class HomeController < ApplicationController
     @post = Post.where(:urltext => params[:posturl]).first
   	@post.body = coderay(@post.body)
   	@title = @post.title
+    @face_url = "/assets/post_imgs/#{@post.imgurl}"
+
 
   end
 
