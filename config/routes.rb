@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  devise_for :admins
   resources :request_texts
 
   resources :subs_emails

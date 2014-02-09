@@ -1,6 +1,15 @@
 class SubsEmailsController < ApplicationController
   before_action :set_subs_email, only: [:show, :edit, :update, :destroy]
 
+  before_filter only: [:index,:show, :edit, :update, :destroy] do |c|
+
+    if !admin_signed_in?
+      redirect_to "/"
+    end
+
+  end
+
+
   # GET /subs_emails
   # GET /subs_emails.json
   def index

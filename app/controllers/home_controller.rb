@@ -1,4 +1,13 @@
 class HomeController < ApplicationController
+
+  before_filter only: [:edit] do |c|
+
+    if !admin_signed_in?
+      redirect_to "/"
+    end
+
+  end
+
   def index
   	@posts = Post.all.order('created_at DESC')
   	@title = "Algomuse"

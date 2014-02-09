@@ -1,9 +1,18 @@
 
-
 <div class="col-md-8 left_cont" >
 
 <div class="article_col">
 <div class="article_content" style="font-size:22px; line-height: 29px;">
+
+  <% if admin_signed_in? %>
+  Admin : <strong><%= current_admin.email %></strong>,
+  <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+
+  <br>
+  <hr>
+
+<% end %>
+
 
 <h2 style="font-weight: 200;" class="">Feedback</h2>
 

@@ -1,6 +1,16 @@
 class RequestTextsController < ApplicationController
   before_action :set_request_text, only: [:show, :edit, :update, :destroy]
 
+  before_filter only: [:index,:show, :edit, :update, :destroy] do |c|
+
+    if !admin_signed_in?
+      redirect_to "/"
+    end
+
+  end
+
+  
+
   # GET /request_texts
   # GET /request_texts.json
   def index
