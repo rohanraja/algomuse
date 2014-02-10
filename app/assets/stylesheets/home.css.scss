@@ -99,7 +99,6 @@ font-size: 2.3em;
 	//@extend .app_border;
 
 //	border: 1px solid;
-	height: 1500px;
 	padding : 20px;
 	padding-right: 0px; 
 	padding-top: 0px;
@@ -302,12 +301,12 @@ $length: 20px;
 .emailcard
 {
 	@extend .app_border ;
-	background-color: rgba(70,73,78,0.75);//#46494E;//background-color: #fff;
+	background-color: white ; //rgba(70,73,78,0.75);//#46494E;//background-color: #fff;
    height: 60px;
-   margin-bottom: 10px;
+   margin-bottom: 40px;
    padding-left: 10px;
    padding-right: 10px;
-   margin-top: 20px;
+ //  margin-top: 20px;
 
 
 	.emailbox
@@ -318,9 +317,9 @@ $length: 20px;
 		position: relative;
 		top: 10px;
 		border-radius: 5px;
-		background-color: rgba(46,48,51,1); //#2e3033;
-		border : none;
-		color: white;
+		//background-color: rgba(46,48,51,1); //#2e3033;
+		//border : none;
+		//color: white;
 
 		transition: width 0.5s;
 		-webkit-transition: width 0.5s; /* Safari */

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-
+  <meta name="google-site-verification" content="hvKRAoDI1r5q2amvQnd1hRKq4oumZktLMq56tImO3BM" />
 
   <title><%= @title %></title>
   <link rel="icon" href="/assets/favicon.gif" type="image/gif" sizes="16x16">
@@ -28,6 +28,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=521589047915317";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
   <!-- <a href="/"><img style="" src="/assets/backdrop.gif"></a> -->
 
@@ -226,6 +236,8 @@ function searchqry(q)
 <!-- <div class="footblock"> -->
 
  <div class="footblock">
+
+ 
 
    
         <ul >
