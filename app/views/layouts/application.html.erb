@@ -2,9 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+
   <title><%= @title %></title>
   <link rel="icon" href="/assets/favicon.gif" type="image/gif" sizes="16x16">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+  
   <meta property="og:image" content="http://algomuse.com<%= @face_url %>" />
 
   <meta name="description" content="">
@@ -25,11 +31,11 @@
 
   <!-- <a href="/"><img style="" src="/assets/backdrop.gif"></a> -->
 
-  <div id="banner">
+  <div id="banner" >
   </div>
   
   
-  <div class="navbar navbar-inverse navbar-moveable" id="nav_line">
+  <div class="navbar navbar-inverse navbar-moveable " id="nav_line">
 
 
     <div class="container">
@@ -44,7 +50,7 @@
       </div>
 
 
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse hidden-xs">
         <ul class="nav navbar-nav">
 
          <% Category.select(:field).distinct.each do |f| %>
@@ -215,7 +221,7 @@ function searchqry(q)
 <!-- GOOGLE ANALYTICS CODE END -->
 
 
-<footer>
+<footer class="hidden-xs">
 
 <!-- <div class="footblock"> -->
 

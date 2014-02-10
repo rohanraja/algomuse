@@ -7,9 +7,9 @@
 <br>
 <div class="article_header">
 
-	<a href="<%= post.link %>"  ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg"></a>
+	<a href="<%= post.link %>"  ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg img-responsive"></a>
 
-	<b><%= post.categories.first.field %> - <span><a href="<%= post.categories.first.link %>"><%= post.categories.first.name %></a></span> </b>
+	<b class="hidden-xs"><%= post.categories.first.field %> - <span><a href="<%= post.categories.first.link %>"><%= post.categories.first.name %></a></span> </b>
 
 	<p class="article_overview"> <%= post.brief %></p>
 

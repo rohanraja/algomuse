@@ -6,11 +6,12 @@
 
 $main-bg: #f2f2f2 ;
 
-
 body
 {
 	background-color: $main-bg !important ;
 	padding-top: 0px !important;
+
+
 }
 
 #banner
@@ -22,11 +23,14 @@ body
 	width: 100%;
 }
 
+
+
 #main_logo
 {
 	position: absolute;
 	margin-top: -120px;
-	margin-left: 30px;
+
+	margin-left: 15px;
 	height: 70px;
 
 	a:hover{
@@ -34,7 +38,7 @@ body
 	}
 	h1{
 		color: #e0e0e0 !important;  
-		font-size: 70px; 
+		 
 		font-weight: 200 !important;
 		letter-spacing:5px;
 		 -webkit-font-smoothing: antialiased;
@@ -42,17 +46,61 @@ body
 	}
 }
 
+@media (min-width: 501px)
+{
+	#main_logo
+	{
+	margin-left: 30px;
+	h1{
+	font-size: 70px;
+	}
+	}
+}
 
+@media (max-width: 500px)
+{
+	#main_logo
+	{
+	margin-left: 15px;
+	h1{
+	font-size: 60px;
+	}
+	}
+
+
+	#nav_line
+	{
+		height: 0px !important;
+	}
+}
+
+
+@media (max-width: 300px)
+{
+	#main_logo
+	{
+	margin-left: 5px;
+	h1{
+	font-size: 40px;
+	}
+	}
+}
+
+
+
+@media (min-width: 992px)
+{
 .col-md-8
 {
-	width: 70% !important;
+	width: 70% ;
 }
 
 .col-md-4
 {
 
-	width: 30% !important;
+	width: 30% ;
 
+}
 }
 
 .yield_container
