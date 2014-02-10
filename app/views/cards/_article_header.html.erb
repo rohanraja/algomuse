@@ -1,13 +1,13 @@
 <center>
 
-<a href="<%= post.link %>" style="color: rgb(82, 82, 82) !important;"><h2 class="article_title">
+<a href="<%= post.link %>" style="color: rgb(82, 82, 82) !important;text-decoration: none;"><h2 class="article_title">
 <%= post.title %>
 </h2></a>
 </center>
 <br>
 <div class="article_header">
 
-	<a href="<%= post.link %>" ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg"></a>
+	<a href="<%= post.link %>"  ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg"></a>
 
 	<b><%= post.categories.first.field %> - <span><a href="<%= post.categories.first.link %>"><%= post.categories.first.name %></a></span> </b>
 

@@ -11,6 +11,7 @@
     <thead>
       <tr>
             <th>Email</th>
+            <th>Ip</th>
             <th></th>
         <th></th>
         <th></th>
@@ -20,6 +21,7 @@
     <tbody>
       <%= content_tag_for(:tr, @subs_emails) do |subs_email| %>
             <td><%= subs_email.email %></td>
+            <td><%= subs_email.ip %></td>
             <td><%= link_to 'Show', subs_email %></td>
         <td><%= link_to 'Edit', edit_subs_email_path(subs_email) %></td>
         <td><%= link_to 'Destroy', subs_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
