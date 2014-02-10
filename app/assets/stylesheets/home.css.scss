@@ -298,6 +298,13 @@ $length: 20px;
 	margin-top: 30px;
 }
 
+.emailicon{
+
+
+ color: rgba(46,48,51,1) !important;
+
+}
+
 .emailcard
 {
 	@extend .app_border ;
@@ -306,7 +313,8 @@ $length: 20px;
    margin-bottom: 40px;
    padding-left: 10px;
    padding-right: 10px;
- //  margin-top: 20px;
+   margin-top: 20px;
+
 
 
 	.emailbox
@@ -319,7 +327,9 @@ $length: 20px;
 		border-radius: 5px;
 		//background-color: rgba(46,48,51,1); //#2e3033;
 		//border : none;
-		//color: white;
+
+		
+
 
 		transition: width 0.5s;
 		-webkit-transition: width 0.5s; /* Safari */
