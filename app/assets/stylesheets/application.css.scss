@@ -83,6 +83,8 @@ padding-left: 0px !important ;
 {
 	background-color: rgba(70,73,78,0.75);//#46494E;
 	border: none !important;
+	height: 50px !important;
+
 	 -webkit-font-smoothing: antialiased; 
 
 	 .navli 
@@ -212,6 +214,7 @@ footer
 .searchbox
 {
 	width: 312px;
+	margin-left: 30px;
 	height: 36px;//44px;
 	font-size: 17px;
 	top: 7px;//3px;
@@ -236,10 +239,11 @@ footer
 {
 	width: 500px; //312px;
 	//height: 500px;
-	padding: 5px;
+	padding: 2px;
+	padding-top: 0px !important;
 //	border : 1px solid;
-	position: absolute;
-	left: 55.5% ;
+//	position: absolute;
+//	left: 55.5% ;
 	top: 50px;
 
 	background-color: #46494E;
@@ -274,7 +278,8 @@ footer
 	border-top-right-radius: 5px;
 	border-top-style: none;
 	border-top-width: 0px;
-	box-shadow: rgba(0, 0, 0, 0.34902) 0px 1px 3px 0px;
+	//box-shadow: rgba(0, 0, 0, 0.6) 2px 1px 3px 0px;
+	box-shadow-left :5px; 
 
 	border-top-right-radius: 0px !important;
 	border-top-left-radius: 0px !important;
@@ -286,7 +291,7 @@ footer
 
 	height: 100px;
 //	border : 1px solid;
-	margin-top: 5px;//: 0px;
+	margin-top: 2px;//: 0px;
 	//padding-top: 12px;
 	//padding-bottom: 15px;
 	background-color: white;
