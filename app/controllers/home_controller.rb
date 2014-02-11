@@ -12,6 +12,7 @@ class HomeController < ApplicationController
   	@posts = Post.all.order('created_at DESC')
   	@title = "Algomuse"
     @face_url = "/assets/favicon.gif"
+    @meta_description = "Algomuse is a technology tutorials blog that contains tutorials and articles mainly focusing on Programming and Web development."
   end
 
   def topic_list
@@ -19,7 +20,9 @@ class HomeController < ApplicationController
     @cat = Category.where(:url_name => request.path.gsub('/','') ).first
 
     @posts = @cat.posts.order('created_at DESC')
-  	@title = @cat.name
+  	@title = @cat.name + " Tutorials"
+    @meta_description = "Algomuse is a technology tutorials blog that contains tutorials and articles mainly focusing on Programming and Web development."
+
   end
 
   def searchqry
@@ -41,7 +44,7 @@ class HomeController < ApplicationController
   	@post.body = coderay(@post.body)
   	@title = @post.title
     @face_url = "/assets/post_imgs/#{@post.imgurl}"
-
+    @meta_description = @post.brief
 
   end
 
