@@ -23,7 +23,9 @@
 	border-top-width: 0px;
 	box-shadow: rgba(0, 0, 0, 0.34902) 0px 1px 3px 0px;
 
+
 }
+
 
 .article_col
 {
@@ -298,62 +300,13 @@ $length: 20px;
 	margin-top: 30px;
 }
 
-.emailicon{
+/*.emailicon{
 
 
  color: rgba(46,48,51,1) !important;
 
-}
+}*/
 
-.emailcard
-{
-	@extend .app_border ;
-	background-color: white ; //rgba(70,73,78,0.75);//#46494E;//background-color: #fff;
-   height: 60px;
-   margin-bottom: 40px;
-   padding-left: 10px;
-   padding-right: 10px;
-   margin-top: 20px;
-
-
-
-	.emailbox
-	{
-		width: 85%;
-		height: 40px;//44px;
-		font-size: 17px;
-		position: relative;
-		top: 10px;
-		border-radius: 5px;
-		//background-color: rgba(46,48,51,1); //#2e3033;
-		//border : none;
-
-		
-
-
-		transition: width 0.5s;
-		-webkit-transition: width 0.5s; /* Safari */
-
-
-	}
-
-	.subsbut
-	{
-		position: absolute;
-		width: 13%;
-		height: 40px;
-		margin-left: 72%;
-		margin-top : -34px;
-		background: none  !important;
-		border: none !important;
-		span{
-			font-size: 2em;
-		}
-		
-
-	}
-
-}
 
 .lang_card
 {
@@ -518,3 +471,71 @@ $length: 20px;
 	}
 
 }
+
+
+
+.fbcard
+{
+  height: auto !important;
+  text-align: center;
+  background-color: white !important ;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.fb-like-box
+{
+	margin-bottom: 10px;
+
+}
+
+
+.emailcard
+{
+  @extend .app_border ;
+  background-color: rgba(70,73,78,0.75);//#46494E;//background-color: #fff;
+   height: 60px;
+   margin-bottom: 40px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-top: 20px;
+ 	
+}
+
+.emailbox
+{
+  width: 85%;
+  height: 40px;//44px;
+  font-size: 17px;
+  position: relative;
+  top: 10px;
+  border-radius: 5px;
+  background-color: rgba(46,48,51,1); //#2e3033;
+  border : none;
+
+  color: white;
+
+
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s; /* Safari */
+
+
+}
+
+.subsbut
+{
+  //position: absolute;
+  width: 13%;
+  height: 40px;
+  margin-right: 3%;
+  margin-top : -34px;
+  background: none  !important;
+  border: none !important;
+    span{
+      font-size: 2em;
+    }
+  
+
+}
+
