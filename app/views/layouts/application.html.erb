@@ -110,25 +110,12 @@
 
 var fixmeTop = $('#nav_line').offset().top; // Get initial position
 
-$(window).scroll(function() {            // Assign scroll event listener
+var fbcardTop = $('.fbcard').offset().top - 70;
 
+$(window).scroll(function() {            // Assign scroll event listener
    
     var currentScroll = $(window).scrollTop(); // Get current position
     if (currentScroll >= fixmeTop) { // Make it fixed if you've scrolled to it
-
-       //.log('trigger UP');
-        // $('#nav_line').css({
-        //     position: 'fixed',
-        //     top: '50px',
-        //     left: '0'
-        // });
-        // $('#filler').css({
-        //     position: 'fixed',
-        //     top: '0px',
-        //     left: '0',
-        //     width: '100%',
-        //     'margin-top': '0px'
-        // });
 
         $('#nav_line').removeClass('navbar-moveable');
         $('#nav_line').addClass('navbar-fixed-top');
@@ -138,24 +125,27 @@ $(window).scroll(function() {            // Assign scroll event listener
 
     } else {                
 
-        //       $('#nav_line').css({
-        //     position: 'static',
-        //     top: 'auto',
-        //     left: 'auto'
-        // });
-        // $('#filler').css({
-        //     position: 'static',
-        //     top: 'auto',
-        //     left: 'auto',
-        //     width: '100%',
-        //     'margin-top': '129px'
-        // });
+       
 
         $('#nav_line').addClass('navbar-moveable');
         $('#nav_line').removeClass('navbar-fixed-top');
 
 
     }
+
+    if(currentScroll >= fbcardTop) {
+
+      $('.fbcard').css('position', 'fixed');
+      $('.fbcard').css('top', '50px');
+      $('.fbcard').css('width', '312px');
+    }
+    else
+    {
+      $('.fbcard').css('position', 'relative');
+      $('.fbcard').css('top', '0px');
+    }
+
+
 });
 
 
