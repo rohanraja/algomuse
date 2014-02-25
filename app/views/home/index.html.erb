@@ -12,7 +12,7 @@
 		
 	<div class="recwrapper">
 
-    <% Category.all.each do |p| %>
+    <% Category.all.order('orderid ASC').each do |p| %>
 
       <%= render partial: "cards/langcard", locals: {cat: p} %>
 
