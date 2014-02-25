@@ -4,7 +4,7 @@
  //= require coderay
  //= require home
 
-$main-bg: #f2f2f2 ;
+$main-bg:  #f2f2f2 ;
 
 body
 {
@@ -20,11 +20,19 @@ body
 	position:absolute; 
 	height:170px;//124px;
 	background-image: url('/assets/backdrop.gif'); 
-	border: 1px solid;
+	//border: 10px solid;
+	//border-bottom: white !important;
 	width: 100%;
 }
 
+#banop
+{
+	position:absolute; 
+	height:170px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.56);
 
+}
 
 #main_logo
 {
@@ -111,7 +119,7 @@ body
 
 .yield_container
 {
-	padding-top: 200px;
+	padding-top: 170px;
 }
 
 
@@ -129,15 +137,16 @@ padding-left: 0px !important ;
 .navbar-fixed-top
 {
 	margin-bottom: 100px;
-	background-color: rgba(70,73,78,0.90) !important;//#46494E;
+	background-color: rgba(0,0,0,0.90) !important; //rgba(70,73,78,0.90) !important;//#46494E;
 
 }
 
 #nav_line
 {
-	background-color: rgba(70,73,78,0.75);//#46494E;
+	background-color: rgba(0,0,0,1);//rgba(70,73,78,0.75);//#46494E;
 	border: none !important;
 	height: 50px !important;
+	border: 1px solid;
 
 	 -webkit-font-smoothing: antialiased; 
 
@@ -152,10 +161,10 @@ padding-left: 0px !important ;
 
 		a
 		{
-			color: #d2d2d2 !important;
+			color: #fff  !important; //#d2d2d2 !important;
 			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-			font-size: 17px;
-			font-weight: 500 !important;
+			font-size: 15px;
+			font-weight: 600 !important;
 
 
 
@@ -187,7 +196,7 @@ padding-right: 0px !important;
 footer
 {
 	height: 100px;
-	background-color: #46494E;
+	background-color: #000; //#46494E;
 	margin-top: 50px;
 	padding-top: 25px;
 
@@ -213,7 +222,7 @@ footer
 				display: inline;
 				margin-left: 20px;
 				a{
-					color: #888 !important;
+					color: #fff !important ; //#888 !important;
 				}
 				
 			}
@@ -240,7 +249,7 @@ footer
 	
 
 	li{
-		background-color: #46494E !important;
+		background-color: #000 !important; //#46494E !important;
 		width: 138px !important;
 		height: 50px;
 			color: black !important;
@@ -267,14 +276,14 @@ footer
 
 .searchbox
 {
-	width: 312px;
+	width: 332px;
 	margin-left: 30px;
 	height: 36px;//44px;
 	font-size: 17px;
 	top: 7px;//3px;
 	position: relative;
 	border-radius: 5px;
-	background-color: rgba(46,48,51,0.8); //#2e3033;
+	background-color: #fff ;//rgba(46,48,51,0.8); //#2e3033;
 	border : none;
 	color: white;
 
