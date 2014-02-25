@@ -281,7 +281,7 @@ line-height: 1.25;
 
 .spaced
 {
-	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 $length: 20px;
@@ -319,7 +319,7 @@ $length: 20px;
 	@extend .app_border ;
 	background-color: #fff;
    height: 70px;
-   margin-bottom: 10px;
+   margin-top: 10px;
 
       	 -webkit-font-smoothing: antialiased; 
 
@@ -381,9 +381,10 @@ $length: 20px;
 .topic_cont
 {
 //	@extend .app_border;
-		padding-left: 10px !important;
-	padding-right: 10px !important;
+	//	padding-left: 10px !important;
+	//padding-right: 10px !important;
 	padding-bottom: 20px !important;
+	padding-top: 10px !important;
 }
 
 .ror_css
