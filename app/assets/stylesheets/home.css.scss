@@ -189,7 +189,7 @@ font-size: 2.3em;
 
 @font-face {
 font-family: 'clear-sans';
-src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
+src: url('/fonts/DroidSans/DroidSans.woff');
 //src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
 }
 
@@ -217,6 +217,7 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 
 		 -webkit-font-smoothing: antialiased; 
 
+font-family: 'clear-sans';
 
 
 	span{
@@ -230,6 +231,13 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 
 	}
 }
+
+@font-face {
+font-family: 'artcont';
+src: url('/fonts/DroidSans/DroidSans.woff');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
+
 .article_content
 {
 	margin-top: 30px;
@@ -238,7 +246,9 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 	 -webkit-font-smoothing: antialiased; 
 	//}
 
-
+font-family: 'artcont' ;
+font-weight: 200 !important;
+color: rgb(70,70,70);
 
 	.step{
 		font-size: 25px;

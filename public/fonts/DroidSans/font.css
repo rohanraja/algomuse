@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'DroidSans';
+	src: url('./DroidSans.eot');
+	src: local('DroidSans'), url('./DroidSans.woff') format('woff'), url('./DroidSans.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1408">Text with this font applied</p> */
+.fontsforweb_fontid_1408 {
+	font-family: 'DroidSans' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
