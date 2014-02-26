@@ -63,15 +63,24 @@
 	margin-right: 0px !important;
 }
 
+
+@font-face {
+font-family: 'blok-regular';
+src: url('/fonts/SourceSansPro-Black.otf');
+src: local('SourceSansPro-Light'), 
+ local('SourceSansPro-Light'), 
+ url('/fonts/SourceSansPro-Light.otf') format('truetype');
+}
+
 .article_title
 {
-    font-weight: 300 !important;
+  //  font-weight: 300 !important;
     ///-webkit-text-stroke: 1px;
 
-       	 -webkit-font-smoothing: antialiased; 
+    //   	 -webkit-font-smoothing: antialiased; 
 
 line-height: 1.1;
-font-family: 'Gotham Rounded SSm A','Gotham Rounded SSm B',sans-serif;
+font-family: 'blok-regular'; //'Gotham Rounded SSm A','Gotham Rounded SSm B',sans-serif;
 //font-family: "TitilliumRegular", Arial, Helvetica, sans-serif;
 font-size: 2.3em;
 
@@ -177,15 +186,27 @@ font-size: 2.3em;
 
 
 }
+
+@font-face {
+font-family: 'clear-sans';
+src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
+
+
 .article_overview
 {
 //	float: right;
 
 //	font-style: italic;
 
-	font-weight: 50;
+	font-family: 'clear-sans';
+
+	//font-weight: 50;
 	color: #727272 ;//888;
+	//letter-spacing: 1px;
 	margin-top: 10px;
+	//font-size: 25px;
 
 
 }
@@ -216,6 +237,7 @@ font-size: 2.3em;
 	//p,b{
 	 -webkit-font-smoothing: antialiased; 
 	//}
+
 
 
 	.step{
@@ -386,7 +408,7 @@ $length: 20px;
 	padding-bottom: 20px !important;
 	padding-top: 10px !important;
 }
-
+ 
 .ror_css
 {
 	background-color: #9A324B !important;

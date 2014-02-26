@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'helveticaneuewebfont';
+	src: url('./helveticaneuewebfont.eot');
+	src: local('helveticaneuewebfont'), url('./helveticaneuewebfont.woff') format('woff'), url('./helveticaneuewebfont.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_7548">Text with this font applied</p> */
+.fontsforweb_fontid_7548 {
+	font-family: 'helveticaneuewebfont' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

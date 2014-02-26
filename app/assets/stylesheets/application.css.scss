@@ -34,6 +34,15 @@ body
 
 }
 
+@font-face {
+font-family: 'exo-light';
+src: url('/fonts/exo/Exo-ExtraLight.otf');
+src: local('Exo-Light'), 
+ local('Exo-Light'), 
+ url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
+
+
 #main_logo
 {
 	position: absolute;
@@ -47,10 +56,15 @@ body
 	}
 	h1{
 		color: #e0e0e0 !important;  
+		font-family: 'exo-light';
 		 
-		font-weight: 200 !important;
-		letter-spacing:5px;
-		 -webkit-font-smoothing: antialiased;
+	//	font-weight: 200 !important;
+		letter-spacing:3px;
+		// -webkit-font-smoothing: antialiased;
+
+		span{
+			//color: #b0b0b0;
+		}
 
 	}
 }
@@ -137,13 +151,19 @@ padding-left: 0px !important ;
 .navbar-fixed-top
 {
 	margin-bottom: 100px;
-	background-color: rgba(0,0,0,0.90) !important; //rgba(70,73,78,0.90) !important;//#46494E;
+	background-color: rgba(34,34,34,0.98) !important; //rgba(70,73,78,0.90) !important;//#46494E;
 
+}
+
+@font-face {
+font-family: 'navfont';
+src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
 }
 
 #nav_line
 {
-	background-color: rgba(0,0,0,1);//rgba(70,73,78,0.75);//#46494E;
+	background-color: rgba(34,34,34,1);//rgba(70,73,78,0.75);//#46494E;
 	border: none !important;
 	height: 50px !important;
 	border: 1px solid;
@@ -162,7 +182,7 @@ padding-left: 0px !important ;
 		a
 		{
 			color: #fff  !important; //#d2d2d2 !important;
-			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-family: 'navfont', Helvetica, Arial, sans-serif;
 			font-size: 15px;
 			font-weight: 600 !important;
 
@@ -196,7 +216,7 @@ padding-right: 0px !important;
 footer
 {
 	height: 100px;
-	background-color: #000; //#46494E;
+	background-color: #222222; //#46494E;
 	margin-top: 50px;
 	padding-top: 25px;
 

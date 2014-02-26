@@ -1,7 +1,8 @@
 .CodeRay {
   background-color: #2F3033;
   border: 1px solid black;
-  font-family: 'Courier New', 'Terminal', monospace;
+
+  //font-family: 'Courier New', 'Terminal', monospace;
   color: #E6E0DB;
   padding: 5px 5px;
   padding-left: 5px;
@@ -25,6 +26,8 @@
   padding: 0px;
  // line-height: 14px !important;
 //  font-family: 'Courier New', 'Terminal', monospace;
+
+  //font-family: Menlo, Monaco, monospace;
   color: #FFFFFF;// #E6E0DB;
     
     background: none !important;

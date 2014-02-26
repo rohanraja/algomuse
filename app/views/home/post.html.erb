@@ -11,7 +11,8 @@
           
 
 	        <div class="article_content">
-	               <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
+                 <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p>\&</p>') ) %>
+	             <!-- hvhv  <%= raw( @post.body.gsub('\n\r', '<br>') ) %> -->
 
 	        </div>
 
