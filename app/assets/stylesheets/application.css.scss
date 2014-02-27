@@ -30,7 +30,7 @@ body
 	position:absolute; 
 	height:170px;
 	width: 100%;
-	background-color: rgba(0,0,0,0.56);
+	background-color: rgba(0,0,0,0.53);
 
 }
 
@@ -226,6 +226,7 @@ footer
 	background-color: #222222; //#46494E;
 	margin-top: 50px;
 	padding-top: 25px;
+	font-family: 'navheaddd';
 
 	.footblock 
 	{
@@ -276,7 +277,7 @@ footer
 	
 
 	li{
-		background-color: #000 !important; //#46494E !important;
+		background-color: rgb(34,34,34) !important; //#46494E !important;
 		width: 138px !important;
 		height: 50px;
 			color: black !important;
