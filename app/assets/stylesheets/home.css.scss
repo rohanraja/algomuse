@@ -82,7 +82,7 @@ src: local('SourceSansPro-Light'),
 line-height: 1.1;
 font-family: 'blok-regular'; //'Gotham Rounded SSm A','Gotham Rounded SSm B',sans-serif;
 //font-family: "TitilliumRegular", Arial, Helvetica, sans-serif;
-font-size: 2.3em;
+font-size: 2.48em;
 
 }
 
@@ -137,7 +137,8 @@ font-size: 2.3em;
 
 	p
 	{
-		font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+		//font-family:  'Open Sans', Helvetica, Arial, sans-serif;
+		font-family: 'clear-sans';
 		font-size: 18px;
 		font-weight: 100;
 
@@ -352,6 +353,7 @@ $length: 20px;
 	background-color: #fff;
    height: 70px;
    margin-top: 10px;
+   //font-family: 'clear-sans';
 
       	 -webkit-font-smoothing: antialiased; 
 
@@ -382,7 +384,6 @@ $length: 20px;
    	font-size: 30px;
    	border : 1px solid;*/
 
-   	
 
 
 
@@ -444,13 +445,20 @@ $length: 20px;
 
 }
 
+@font-face {
+font-family: 'thead';
+src: url('/fonts/SourceSansPro-ExtraLight.otf');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
+
 .topic_head
 {
 	text-align: center;
 	margin-bottom: 10px;
 	margin-top: 0px;
-	-webkit-font-smoothing: antialiased;
-	font-weight: 100;
+	font-family: 'thead';
+	//-webkit-font-smoothing: antialiased;
+	//font-weight: 100;
 	background-color: #fff;
 	@extend .app_border;
 	padding: 20px;
@@ -594,12 +602,19 @@ $length: 20px;
 
 }
 
+@font-face {
+font-family: 'dhead';
+src: url('/fonts/SourceSansPro-ExtraLight.otf');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
+
 .datehead
 {
- font-weight: 200;
- font-style: italic;
+ font-weight: 600;
+ //font-style: italic;
  -webkit-font-smoothing: antialiased;
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ font-family: 'dhead';
+//font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 color: #4D4F54; //c2c2c2
 
 }

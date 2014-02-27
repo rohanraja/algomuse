@@ -161,6 +161,11 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 //src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
 }
 
+@font-face {
+font-family: 'navheaddd';
+src: url('/fonts/SourceSansPro-Regular.otf');
+//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
+}
 #nav_line
 {
 	background-color: rgba(34,34,34,1);//rgba(70,73,78,0.75);//#46494E;
@@ -168,7 +173,7 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 	height: 50px !important;
 	border: 1px solid;
 
-	 -webkit-font-smoothing: antialiased; 
+	// -webkit-font-smoothing: antialiased; 
 
 	 .navli 
 	{
@@ -183,10 +188,10 @@ src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
 		{
 			color: #fff  !important; //#d2d2d2 !important;
 
-			font-family: 'Open Sans',Helvetica,Arial,sans-serif;
-			//font-family: 'navfont', Helvetica, Arial, sans-serif;
+			//font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+			font-family: 'navheaddd', Helvetica, Arial, sans-serif;
 			font-size: 17px;
-			font-weight: 500 !important;
+			//font-weight: 700 !important;
 
 
 
