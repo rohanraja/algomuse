@@ -227,7 +227,7 @@ font-family: 'clear-sans';
 		color: #787378;//#464544;
 		//@extend .app_border;
 		padding: 5px;
-		font-style: italic;
+		//font-style: italic;
 		text-decoration: underline;
 
 	}
@@ -252,7 +252,8 @@ font-weight: 200 !important;
 color: rgb(70,70,70);
 
 	.step{
-		font-size: 25px;
+		font-size: 26px;
+		color: rgb(45,45,45);
 		font-weight: normal;
 		line-height: 30px;
 		margin-top: 40px !important;
