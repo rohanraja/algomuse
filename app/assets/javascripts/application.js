@@ -27,6 +27,12 @@ $('.dropdown').hover(function() {
 });
 
 
+$('.CodeRay .extra_p').each(function(i,val){
+
+	$(val).replaceWith($(val).html());
+
+});
+
 });
 
 
