@@ -82,7 +82,7 @@ src: local('SourceSansPro-Light'),
 line-height: 1.1;
 font-family: 'blok-regular'; //'Gotham Rounded SSm A','Gotham Rounded SSm B',sans-serif;
 //font-family: "TitilliumRegular", Arial, Helvetica, sans-serif;
-font-size: 2.48em;
+font-size: 2.32em;
 
 }
 
@@ -251,16 +251,28 @@ font-family: 'artcont' ;
 font-weight: 200 !important;
 color: rgb(70,70,70);
 
+	
+	b, strong{
+		//font-weight: 110;
+		font-weight: normal;
+	//	 background-color : #2F3033;
+  color : #6f0f0d ;
+// padding-left: 3px;
+  //padding-right: 3px;
+  font-family: Arial;
+
+	}
+
 	.step{
 		font-size: 26px;
 		color: rgb(45,45,45);
 		font-weight: normal;
 		line-height: 30px;
 		margin-top: 40px !important;
+		padding: 0px;
 	}
-	b{
-		font-weight: 110;
-	}
+
+
 }
 
 .article_arthor
