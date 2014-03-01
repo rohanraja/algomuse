@@ -1,9 +1,12 @@
 
 <% posts.each do |p| %>
+
+
 <div class="article_col spaced">
-
-
            <%= render partial: "cards/article_header", locals: {post: p} %>
-    
+    <a href="<%= p.link %>">
+<%= image_tag("readm.png", :class => "rmore") %>
+</a>
 </div>
+
 <% end %>

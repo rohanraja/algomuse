@@ -33,6 +33,20 @@ $('.CodeRay .extra_p').each(function(i,val){
 
 });
 
+
+
+$('.article_col').hover(function(){
+
+	//$(this).find('.rmore').css('display', 'inline');
+	$(this).find('.rmore').fadeIn('fast');
+
+}, function(){
+
+	$(this).find('.rmore').fadeOut('fast');
+
+});
+
+
 });
 
 
