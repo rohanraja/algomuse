@@ -3,6 +3,8 @@
  //= require bootstrap-generators
  //= require coderay
  //= require home
+ //= require fonts
+ //= require article_header
 
 $main-bg:  #f2f2f2 ;
 
@@ -32,14 +34,6 @@ body
 	width: 100%;
 	background-color: rgba(0,0,0,0.53);
 
-}
-
-@font-face {
-font-family: 'exo-light';
-src: url('/fonts/exo/Exo-ExtraLight.otf');
-src: local('Exo-Light'), 
- local('Exo-Light'), 
- url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
 }
 
 
@@ -155,17 +149,6 @@ padding-left: 0px !important ;
 
 }
 
-@font-face {
-font-family: 'navfont';
-src: url('/fonts/OpenSansRegular/OpenSansRegular.woff');
-//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
-}
-
-@font-face {
-font-family: 'navheaddd';
-src: url('/fonts/SourceSansPro-Regular.otf');
-//src: local('Exo-Light'), local('Exo-Light'), url('/fonts/exo/Exo-ExtraLight.otf') format('truetype');
-}
 #nav_line
 {
 	background-color: rgba(34,34,34,1);//rgba(70,73,78,0.75);//#46494E;
