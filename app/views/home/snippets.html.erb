@@ -1,0 +1,125 @@
+
+<div class="row" style="margin-top:10px;">
+
+	<div class="col-xs-12 col-md-5 sniplist ">
+
+		<input class="snip_input" type="text" placeholder="Search snippets" onkeyup="snipsearch(this.value)">
+
+		<div class="main_sniplist">
+		
+
+			<%= render partial: "cards/sniplist", locals: {posts: Post.where('sniptext != ""').order('created_at DESC').limit(7) } %>
+                
+
+                </div>
+
+		
+	</div>
+
+	<div class="col-xs-12 col-md-7 snip_main_cont" style="padding: 0px !important;" >
+
+		<div class="snip_cont" >
+
+			<div class="snip_heading"><%= @post.title %></div>
+
+			<div class="snip_body">
+
+			<%= raw( @post.body.gsub(/^\s*[^<].*/, '<p class="extra_p">\&</p>') ) %>
+		</div>
+
+
+		</div>
+
+	</div>	
+
+</div>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+	$('.snip_anchor:first').click();
+
+	});
+
+function on_snip_click(e, post_id, post_title)
+{
+	$('.snip_cards').removeClass('active');
+	$(e).find('.snip_cards').addClass('active');
+
+	
+
+	$.get('/get_snip?pid=' + post_id,function(data){
+
+		$('.snip_heading').html(post_title);  
+		$('.snip_body').html(data);
+		  
+
+		q = $('.snip_input').val() ;
+
+		if(q!= "")
+		{
+			$('.snip_main_cont').highlight(q);
+			
+			
+			if($(window).scrollTop() != $('.snip_main_cont').find('.highlight').eq(0).offset().top - 100)
+			{
+
+  		console.log("POST ANI");
+
+				$('html, body').animate({
+			        		scrollTop: $('.snip_main_cont').find('.highlight').eq(0).offset().top - 100
+			    		}, 500);
+			}
+		}
+
+	});
+
+
+}
+
+
+
+function snipsearch(q)
+{
+  //
+  //$('.search_results').css('display', 'block');//slideDown();
+
+
+  $.get('/searchsnip/' + q, function(data){
+
+
+  	if(q == $('.snip_input').val()){
+
+
+	    if(data !='0')
+	    {
+	    $('.main_sniplist').html(data);
+
+	      $('.main_sniplist').slideDown();
+	      $('.snip_anchor:first').click();
+
+	      
+	     	$('.main_sniplist').highlight(q);
+	      
+
+
+	    }
+	     else
+	        $('.main_sniplist').fadeOut('fast');
+
+    }
+
+
+  });
+
+  // if(q=='')
+  // {
+  //   $('.main_sniplist').fadeOut('fast');
+  // }
+
+
+}
+
+</script>

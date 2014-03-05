@@ -76,6 +76,67 @@ class HomeController < ApplicationController
     redirect_to edit_post_path(Post.first)
   end
 
+  def snippets
+
+    @post = Post.last
+    @post.body = coderay(@post.sniptext)
+
+    @title = "Snippets"
+
+  end
+
+  def get_snip
+
+     @post = Post.find(params[:pid])
+     @post.body = (@post.sniptext)
+
+     render :text => ( @post.body.gsub(/^\s*[^<].*/, '<p class="extra_p">\&</p>'))
+
+  end
+
+  def searchsnip
+    
+    posts = Post.where("title LIKE '%#{params[:q]}%' OR sniptext LIKE '%#{params[:q]}%'").limit(7)
+
+    if posts.count == 0
+      render :text => "0"
+    else
+
+      render partial: "cards/sniplist", locals: {posts: posts }
+    end
+
+
+  end
+
+  def parsecodes
+
+
+    out = ""
+
+    Post.all.each do |p|
+
+      #p = Post.find 5
+      text = p.body
+
+      out = ""
+
+      text.gsub(/\<code( language="(.+?)")?\>(.+?)\<\/code\>/m) do
+
+        #out = out + $2
+
+
+        out = out + CodeRay.scan($3, $2).div(:css => :class)
+
+
+      end
+
+      p.update(:sniptext => out)
+
+    end
+
+    render :text => out
+  end
+
 
   def about
 

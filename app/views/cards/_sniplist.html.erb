@@ -1,0 +1,17 @@
+<% posts.each do |post| %>
+
+<a href="#snippet" class="snip_anchor" style="color: rgb(51, 51, 51) !important;text-decoration: none;" onclick="on_snip_click(this, <%= post.id %>, '<%= post.title %>')" >
+<div class="snip_cards">
+
+                	<div class="sniptext">
+
+                		<p><b><%= post.categories.first.name %> -</b> <%= post.title %> </p>
+
+                	</div>
+
+</div>
+
+
+</a>
+
+                <% end %>

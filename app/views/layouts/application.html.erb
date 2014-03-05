@@ -74,6 +74,7 @@
 
               <% end %>
 
+
               </ul>
 
 
@@ -82,7 +83,7 @@
           <% end %>
 
           
-
+          <li class="dropdown navli <%= "active" if params[:action] == "snippets" %>"><a href="/snippets">Snippets</a></li>
           
           <!-- <li class="dropdown navli"><a href="/about">About</a></li> -->
         </ul>
@@ -111,7 +112,13 @@
 
 var fixmeTop = $('#nav_line').offset().top; // Get initial position
 
-var fbcardTop = $('.fbcard').offset().top - 70;
+<% if params[:action] == "snippets" %>
+
+var snipTop = $('.sniplist').offset().top - 60;
+
+<% end %>
+
+//var fbcardTop = $('.fbcard').offset().top - 70;
 
 $(window).scroll(function() {            // Assign scroll event listener
    
@@ -133,6 +140,28 @@ $(window).scroll(function() {            // Assign scroll event listener
 
 
     }
+
+    <% if params[:action] == "snippets" %>
+
+    if(currentScroll >= snipTop) {
+
+       $('.sniplist').css('position', 'fixed');
+       $('.snip_main_cont').addClass('col-md-offset-5');
+
+       $('.sniplist').css('top', '60px');
+       $('.sniplist').css('width', '475px');
+
+    }
+    else
+    {
+      $('.sniplist').css('position', 'relative');
+      $('.sniplist').css('top', '0px');
+      $('.snip_main_cont').removeClass('col-md-offset-5');
+
+    }
+
+    <% end %>
+
 
     // if(currentScroll >= fbcardTop) {
 

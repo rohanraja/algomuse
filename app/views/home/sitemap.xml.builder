@@ -7,6 +7,11 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   end
 
   xml.url do
+    xml.loc "http://algomuse.com/snippets"
+    xml.priority 1.0
+  end
+
+  xml.url do
     xml.loc "http://algomuse.com/about"
     xml.priority 1.0
   end

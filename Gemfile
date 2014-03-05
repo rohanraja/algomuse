@@ -35,6 +35,8 @@ gem 'turbolinks'
 
 gem 'coderay'
 
+#gem 'nokogiri'
+
 gem 'mysql2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

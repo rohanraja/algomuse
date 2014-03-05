@@ -15,6 +15,11 @@ Blog::Application.routes.draw do
   get "rohan" => 'home#rohan'
   get "request" => 'home#request_tut'
   get "feedback" => 'home#feedback'
+  get "snippets" => 'home#snippets'
+  get "parsecodes" => 'home#parsecodes'
+  get "get_snip" => 'home#get_snip'
+
+  get "searchsnip/:q" => 'home#searchsnip'
   
   get "home/topic_list/:id" => 'home#topic_list'
   get "home/searchqry/:q" => 'home#searchqry'
