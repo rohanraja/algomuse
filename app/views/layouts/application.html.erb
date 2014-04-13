@@ -110,10 +110,11 @@
 
 <script type="text/javascript">
 
-var fixmeTop = $('#nav_line').offset().top ; // Get initial position
+var fixmeTop = $('#nav_line').offset().top + 60; // Get initial position
 var fbTop = $('.mainRECCcard').offset().top + 300;
 
 var changeee = 0;
+var changeee2 = 0;
 
 <% if params[:action] == "snippets" %>
 
@@ -129,15 +130,28 @@ $(window).scroll(function() {            // Assign scroll event listener
 
     if (currentScroll >= fixmeTop) { // Make it fixed if you've scrolled to it
 
-        $('#nav_line').removeClass('navbar-moveable');
+        
+
+        if(changeee2 == 1)
+      {  
+
+       $('#nav_line').removeClass('navbar-moveable');
         $('#nav_line').addClass('navbar-fixed-top');
 
+         $('#nav_line').attr('style', 'top : -100px');
+
+         $('#nav_line').animate({top: 0});
+
+       changeee2 = 0;
+     }
 
 
 
-    } else {                
+    } 
+    if (currentScroll < fixmeTop - 60)  {                
 
        
+        changeee2 = 1;
 
         $('#nav_line').addClass('navbar-moveable');
         $('#nav_line').removeClass('navbar-fixed-top');
