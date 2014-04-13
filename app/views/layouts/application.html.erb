@@ -111,7 +111,7 @@
 <script type="text/javascript">
 
 var fixmeTop = $('#nav_line').offset().top + 60; // Get initial position
-var fbTop = $('.mainRECCcard').offset().top + 300;
+
 
 var changeee = 0;
 var changeee2 = 0;
@@ -119,6 +119,10 @@ var changeee2 = 0;
 <% if params[:action] == "snippets" %>
 
 var snipTop = $('.sniplist').offset().top - 60;
+
+<% else %>
+
+var fbTop = $('.mainRECCcard').offset().top + 300;
 
 <% end %>
 
@@ -159,6 +163,29 @@ $(window).scroll(function() {            // Assign scroll event listener
 
     }
 
+    
+
+    <% if params[:action] == "snippets" %>
+
+    if(currentScroll >= snipTop) {
+
+       $('.sniplist').css('position', 'fixed');
+       $('.snip_main_cont').addClass('col-md-offset-5');
+
+       $('.sniplist').css('top', '60px');
+       $('.sniplist').css('width', '475px');
+
+    }
+    else
+    {
+      $('.sniplist').css('position', 'relative');
+      $('.sniplist').css('top', '0px');
+      $('.snip_main_cont').removeClass('col-md-offset-5');
+
+    }
+
+    <% else %>
+
     if (currentScroll >= fbTop) { // Make it fixed if you've scrolled to it
 
       
@@ -186,25 +213,7 @@ $(window).scroll(function() {            // Assign scroll event listener
 
        
     }
-
-    <% if params[:action] == "snippets" %>
-
-    if(currentScroll >= snipTop) {
-
-       $('.sniplist').css('position', 'fixed');
-       $('.snip_main_cont').addClass('col-md-offset-5');
-
-       $('.sniplist').css('top', '60px');
-       $('.sniplist').css('width', '475px');
-
-    }
-    else
-    {
-      $('.sniplist').css('position', 'relative');
-      $('.sniplist').css('top', '0px');
-      $('.snip_main_cont').removeClass('col-md-offset-5');
-
-    }
+    
 
     <% end %>
 
