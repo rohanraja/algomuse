@@ -1,4 +1,6 @@
 
+source 'http://rubygems.org'
+
 gem "rails"
 
 # Use sqlite3 as the database for Active Record
@@ -37,7 +39,7 @@ gem 'coderay'
 
 #gem 'nokogiri'
 
-gem 'mysql2'
+#gem 'mysql2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
