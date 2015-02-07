@@ -64,6 +64,10 @@
 	<div class="recwrapper">
 
           <h2 class="topic_head" style="height : 30px; font-size: 30px; padding: 0px;">Recommended</h2>
+
+          <div class="ad-container">
+                    <%= render partial: "cards/ad_skyscrapper" %>
+                </div>
 	
 
                 <% Post.all.order('created_at DESC').limit(5).each do |p| %>
@@ -76,7 +80,7 @@
                 <%= render partial: "cards/emailcard" %>
 
                 <div class="ad-container">
-                    <%= render partial: "cards/ad_skyscrapper" %>
+                    <%= render partial: "cards/ad_rect" %>
                 </div>
 
 
