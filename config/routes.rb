@@ -5,6 +5,7 @@ Blog::Application.routes.draw do
   resources :subs_emails
 
   resources :categories
+  resources :authors
 
   get "home/index"
   get "home/edit"
