@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def index
-  	@posts = Post.all.order('created_at DESC')
+  	@posts = Post.where("active >= 1").order('created_at DESC')
   	@title = "Algomuse"
     @face_url = "/assets/favicon.gif"
     @meta_description = "Algomuse is a technology tutorials blog that contains tutorials and articles mainly focusing on Programming and Web development."
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
 
     @cat = Category.where(:url_name => request.path.gsub('/','') ).first
 
-    @posts = @cat.posts.order('created_at DESC')
+    @posts = @cat.posts.where("active >=1 ").order('created_at DESC')
   	@title = @cat.name + " Tutorials"
     @meta_description = "Algomuse is a technology tutorials blog that contains tutorials and articles mainly focusing on Programming and Web development."
 
