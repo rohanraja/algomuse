@@ -10,6 +10,8 @@ RUN apt-get update && apt-get -y install \
   nodejs \
   vim
 
+RUN gem sources -a http://rubygems.org  
+
 # Install ruby gems.
 RUN gem install --no-ri --no-rdoc bundler
 

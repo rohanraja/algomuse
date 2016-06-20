@@ -50,13 +50,15 @@
 
 //	font-style: italic;
 
-	font-family: 'clear-sans';
+	// font-family: 'clear-sans';
+  font-family: 'Helvetica';
 
 	//font-weight: 50;
 	color: #727272 ;//888;
 	//letter-spacing: 1px;
 	margin-top: 10px;
 	//font-size: 25px;
+    font-size: 16px;
 
 
 }
@@ -65,7 +67,7 @@
 {
 //	height: 170px;
 
-		 -webkit-font-smoothing: antialiased; 
+		 // -webkit-font-smoothing: antialiased; 
 
 font-family: 'clear-sans';
 
@@ -94,7 +96,7 @@ font-family: 'clear-sans';
 	background-color: #fff;
 	@extend .app_border;
 	padding: 20px;
-	font-size: 40px;
+	font-size: 30px;
 
 
 }

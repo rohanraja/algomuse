@@ -1,7 +1,10 @@
 
 <div class="row">
 
-	<div class="col-md-8 left_cont" >
+	<!-- <div class="col&#45;sm&#45;3" > -->
+  <!-- </div> -->
+	<div class="col-md-9 left_cont" style="  margin-left: 135px;" >
+	<!-- <div class="col&#45;md&#45;offset&#45;0 col&#45;md&#45;9 left_cont" > -->
 
 		<div class="article_col">
 
@@ -54,7 +57,8 @@
 
 	</div>
 
-	<div class="col-md-4 recom">
+	<!-- <div class="col&#45;md&#45;3 recom" > -->
+	<div class="col-md-3 recom" style="display:none">
 	<!-- 	<div class="borderdiv"></div> -->
 		
 	<div class="recwrapper">
@@ -65,7 +69,7 @@
                     <%= render partial: "cards/ad_skyscrapper" %>
                 </div>
 
-                <h2 class="topic_head" style="height : 30px; font-size: 30px; padding: 0px;">Recommended</h2>
+                <!-- <h2 class="topic_head" style="height : 15px; font&#45;size: 14px; padding: 0px;">Recommended</h2> -->
 	
 
                 <% Post.where("active >=1 ").order('created_at DESC').limit(5).each do |p| %>
@@ -75,8 +79,8 @@
                 <% end %>
                 
               
-                <%= render partial: "cards/emailcard" %>
-
+                <%# <%= render partial: "cards/emailcard" %>
+                <%#
                 <div class="ad-container">
                     <%= render partial: "cards/ad_rect" %>
                 </div>
