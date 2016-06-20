@@ -1,6 +1,14 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
 
+  before_filter do |c|
+
+    if !admin_signed_in?
+      redirect_to "/"
+    end
+
+  end
+
   # GET /authors
   # GET /authors.json
   def index
