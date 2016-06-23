@@ -10,10 +10,8 @@ RUN apt-get update && apt-get -y install \
   nodejs \
   vim
 
-RUN gem sources -a http://rubygems.org  
-
 # Install ruby gems.
-RUN gem install --no-ri --no-rdoc bundler
+RUN gem install --source "http://rubygems.org" --no-ri --no-rdoc bundler
 
 # Configure the main working directory. This is the base
 # directory used in any further RUN, COPY, and ENTRYPOINT
@@ -27,7 +25,7 @@ WORKDIR /$APP_HOME
 # will be cached unless changes to one of those two files
 # are made.
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler && bundle install --jobs 20 --retry 5
+RUN gem install --source "http://rubygems.org" bundler && bundle install --source "http://rubygems.org" --jobs 20 --retry 5
 
 # Copy the main application.
 COPY . ./

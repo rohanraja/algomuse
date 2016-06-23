@@ -13,7 +13,7 @@
 	<a href="<%= post.link %>"  ><img src="/assets/post_imgs/<%= post.imgurl %>" class="headimg img-responsive"></a>
 
 	<b class="hidden-xs"><%= post.categories.first.field %> - <span><a href="<%= post.categories.first.link %>"><%= post.categories.first.name %></a></span> 
-		<!-- <b class="pull-right datehead"><%= post.created_at.strftime("%d %b, %Y") %></b> -->
+		<b class="pull-right datehead"><%= post.created_at.strftime("%d %b, %Y") %></b>
 	</b>
 
 	<p class="article_overview"> <%= post.brief %></p>
