@@ -1,4 +1,6 @@
-
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css"> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script> -->
+<!-- <script>hljs.initHighlightingOnLoad();</script> -->
 <div class="row">
 
 	<!-- <div class="col&#45;sm&#45;3" > -->
@@ -14,6 +16,7 @@
           
 
 	        <div class="article_content">
+                 <%# <%= raw( @post.body ) %>
                  <%= raw( @post.body.gsub(/^\s*[^<].*/, '<p class="extra_p">\&</p>') ) %>
 	             <!-- hvhv  <%= raw( @post.body.gsub('\n\r', '<br>') ) %> -->
 

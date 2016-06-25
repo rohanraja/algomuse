@@ -16,7 +16,6 @@
 //= require bootstrap
 //= require_tree .
 
-
 $(document).ready(function(){
 
 
@@ -26,12 +25,6 @@ $('.dropdown').hover(function() {
   $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
 });
 
-
-$('.CodeRay .extra_p').each(function(i,val){
-
-	$(val).replaceWith($(val).html());
-
-});
 
 
 
@@ -46,7 +39,7 @@ $('.article_col').hover(function(){
 
 });
 
+$('.CodeRay .extra_p').contents().unwrap()
+$( 'p:empty' ).remove();
 
 });
-
-

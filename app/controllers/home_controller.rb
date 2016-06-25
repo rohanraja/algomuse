@@ -41,7 +41,11 @@ class HomeController < ApplicationController
   def post
     
     @post = Post.where(:urltext => params[:posturl]).first
-  	@post.body = coderay(@post.body)
+    # @post.body = @post.body.gsub("<pre>", "")
+    # @post.body = @post.body.gsub("</pre>", "")
+    # @post.body = @post.body.gsub("<code", "<pre><code")
+    # @post.body = @post.body.gsub("</code>", "</code></pre>")
+    @post.body = coderay(@post.body)
   	@title = @post.title
     @face_url = "/assets/post_imgs/#{@post.imgurl}"
     @meta_description = @post.brief
@@ -51,7 +55,6 @@ class HomeController < ApplicationController
   def edit
 
   	@post = Post.find(1)
-  	@post.body = coderay(@post.body)
   	@title = @post.title
 
   end
@@ -79,7 +82,6 @@ class HomeController < ApplicationController
   def snippets
 
     @post = Post.last
-    @post.body = coderay(@post.sniptext)
 
     @title = "Snippets"
 
@@ -106,35 +108,6 @@ class HomeController < ApplicationController
     end
 
 
-  end
-
-  def parsecodes
-
-
-    out = ""
-
-    Post.all.each do |p|
-
-      #p = Post.find 5
-      text = p.body
-
-      out = ""
-
-      text.gsub(/\<code( language="(.+?)")?\>(.+?)\<\/code\>/m) do
-
-        #out = out + $2
-
-
-        out = out + CodeRay.scan($3, $2).div(:css => :class)
-
-
-      end
-
-      p.update(:sniptext => out)
-
-    end
-
-    render :text => out
   end
 
 
