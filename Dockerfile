@@ -25,7 +25,7 @@ WORKDIR /$APP_HOME
 # will be cached unless changes to one of those two files
 # are made.
 COPY Gemfile Gemfile.lock ./
-RUN gem install --source "http://rubygems.org" bundler && bundle install --source "http://rubygems.org" --jobs 20 --retry 5
+RUN gem install bundler && bundle install --jobs 20 --retry 5
 
 # Copy the main application.
 COPY . ./
